@@ -49,6 +49,7 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     func handleSwipeChanged(_ gesture: UIPanGestureRecognizer){
         let translation = gesture.translation(in: self.superview)
         if(translation.x > 0){return}
+        print(translation.x)
         self.backgroundColor = UIColor.black.withAlphaComponent(-translation.y / 200)
         self.transform = CGAffineTransform(translationX: translation.x, y: 0)
     }
@@ -56,8 +57,8 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     func handlePanEnded(_ gesture: UIPanGestureRecognizer){
         let translation = gesture.translation(in: self.superview)
         let velocity = gesture.velocity(in: self.superview)
-        
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        //print(gesture.velocity)
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.transform = .identity
             if(translation.x < -200 || velocity.x < -500){
                 self.delegate?.hideSideMenuView()
