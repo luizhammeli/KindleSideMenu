@@ -12,12 +12,13 @@ extension SideMenuView{
     
     func setUpTableView(){
         tableView.separatorStyle = .none
+        tableView.isScrollEnabled = false
         self.tableView.register(SideMenuTableViewCell.self, forCellReuseIdentifier: cellID)
         self.addSubview(tableView)
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -90).isActive = true
+        tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

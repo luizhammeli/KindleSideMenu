@@ -24,6 +24,16 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
         return tableView
     }()
     
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.black
+        view.alpha = 0
+        return view
+    }()
+    
+    var startSideMenuPanGesture = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(BookCell.self, forCellReuseIdentifier: cellID)
@@ -39,11 +49,21 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
         let menuBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(self.showSideMenu))
         self.navigationItem.leftBarButtonItem = menuBarButton
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "amazon_icon"), style: .plain, target: self, action: nil)
+        
+        self.view.addSubview(containerView)
+        containerView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        containerView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        containerView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     @objc func showSideMenu(){
-        guard let navController = self.navigationController as? LightNavigationBarController else{return}
-        navController.showSideMenu()
+        guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? BaseViewController else {return}
+        rootViewController.showSideMenu()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func fetchData(){

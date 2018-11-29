@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = LightNavigationBarController(rootViewController: BooksListViewController())
+        window?.rootViewController = BaseViewController()
         
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
 }

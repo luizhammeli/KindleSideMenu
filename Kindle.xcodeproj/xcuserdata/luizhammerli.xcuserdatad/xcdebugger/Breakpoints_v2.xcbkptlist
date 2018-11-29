@@ -73,14 +73,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kindle/View/SideMenu/SideMenuView.swift"
-            timestampString = "555208951.326475"
+            filePath = "Kindle/Controller/NavigationController/LightNavigationController.swift"
+            timestampString = "565180711.70682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "hideSideMenu(gesture:)"
-            landmarkType = "7">
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "LightNavigationBarController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,14 +89,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kindle/View/SideMenu/SideMenuView.swift"
-            timestampString = "555208951.326571"
+            filePath = "Kindle/Controller/NavigationController/LightNavigationController.swift"
+            timestampString = "565180711.707028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "hideSideMenu(gesture:)"
-            landmarkType = "7">
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "LightNavigationBarController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -105,12 +105,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kindle/View/SideMenu/SideMenuView.swift"
-            timestampString = "555208951.3266521"
+            filePath = "Kindle/Controller/NavigationController/BaseViewController.swift"
+            timestampString = "565185491.0358191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "handlePanEnded(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -121,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kindle/View/SideMenu/SideMenuView.swift"
-            timestampString = "555208951.326723"
+            filePath = "Kindle/Controller/NavigationController/BaseViewController.swift"
+            timestampString = "565185491.036039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "handleSwipeChanged(_:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "handlePanEnded(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,13 +137,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kindle/View/SideMenu/SideMenuView.swift"
-            timestampString = "555208951.326789"
+            filePath = "Kindle/Controller/NavigationController/BaseViewController.swift"
+            timestampString = "565185491.036158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "handleSwipeChanged(_:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "handlePanGesture(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kindle/Controller/NavigationController/BaseViewController.swift"
+            timestampString = "565185491.036258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "handlePanGesture(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kindle/Controller/NavigationController/BaseViewController.swift"
+            timestampString = "565185491.03636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "hideSideMenu()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

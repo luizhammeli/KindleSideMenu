@@ -12,13 +12,13 @@
 		04E8285D1FDDA83E008AF3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8285C1FDDA83E008AF3DB /* Assets.xcassets */; };
 		04E828601FDDA83E008AF3DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E8285E1FDDA83E008AF3DB /* LaunchScreen.storyboard */; };
 		04E828681FDDE280008AF3DB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E828671FDDE280008AF3DB /* Page.swift */; };
+		384C428221AF16B300084C67 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C428121AF16B200084C67 /* BaseViewController.swift */; };
 		3857B8D9211719D700A07DCA /* SideMenuHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857B8D8211719D700A07DCA /* SideMenuHeaderSectionView.swift */; };
 		3857B8DC21171D0A00A07DCA /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857B8DB21171D0A00A07DCA /* SideMenuItem.swift */; };
 		3857B8DF2117C54800A07DCA /* SideMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857B8DE2117C54800A07DCA /* SideMenuDelegate.swift */; };
 		3857B8E22117D67100A07DCA /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857B8E12117D67100A07DCA /* CustomFooterView.swift */; };
 		3857B8E52117D6AE00A07DCA /* navigationController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857B8E42117D6AE00A07DCA /* navigationController+Layout.swift */; };
 		387F890821161E16005ECF26 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F890721161E16005ECF26 /* SideMenuView.swift */; };
-		387F890B2116264D005ECF26 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F890A2116264D005ECF26 /* LightNavigationController.swift */; };
 		387F890F211626A6005ECF26 /* sideMenuView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F890E211626A6005ECF26 /* sideMenuView+TableView.swift */; };
 		387F891121162EA1005ECF26 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387F891021162EA1005ECF26 /* SideMenuTableViewCell.swift */; };
 		38B3095021191CC700D5C930 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B3094F21191CC700D5C930 /* ApiService.swift */; };
@@ -38,13 +38,13 @@
 		04E8285F1FDDA83E008AF3DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E828611FDDA83E008AF3DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E828671FDDE280008AF3DB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		384C428121AF16B200084C67 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3857B8D8211719D700A07DCA /* SideMenuHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderSectionView.swift; sourceTree = "<group>"; };
 		3857B8DB21171D0A00A07DCA /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		3857B8DE2117C54800A07DCA /* SideMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDelegate.swift; sourceTree = "<group>"; };
 		3857B8E12117D67100A07DCA /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 		3857B8E42117D6AE00A07DCA /* navigationController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "navigationController+Layout.swift"; sourceTree = "<group>"; };
 		387F890721161E16005ECF26 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		387F890A2116264D005ECF26 /* LightNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
 		387F890E211626A6005ECF26 /* sideMenuView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sideMenuView+TableView.swift"; sourceTree = "<group>"; };
 		387F891021162EA1005ECF26 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		38B3094F21191CC700D5C930 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -86,12 +86,12 @@
 		04E828541FDDA83E008AF3DB /* Kindle */ = {
 			isa = PBXGroup;
 			children = (
+				04E828551FDDA83E008AF3DB /* AppDelegate.swift */,
 				38B30955211921C800D5C930 /* Utils */,
 				38B3094E21191CB600D5C930 /* Service */,
 				3857B8DD2117C52600A07DCA /* Protocol */,
 				387F8909211625B3005ECF26 /* Controller */,
 				387F890321161DBD005ECF26 /* View */,
-				04E828551FDDA83E008AF3DB /* AppDelegate.swift */,
 				3857B8DA21171C6600A07DCA /* Model */,
 				04E8285C1FDDA83E008AF3DB /* Assets.xcassets */,
 				04E8285E1FDDA83E008AF3DB /* LaunchScreen.storyboard */,
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3857B8E32117D69200A07DCA /* Extension */,
-				387F890A2116264D005ECF26 /* LightNavigationController.swift */,
+				384C428121AF16B200084C67 /* BaseViewController.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -324,6 +324,7 @@
 				38B309542119214F00D5C930 /* booksListViewController+TableVIew.swift in Sources */,
 				38D114E51FEF26340004E288 /* PageViewController.swift in Sources */,
 				3857B8DC21171D0A00A07DCA /* SideMenuItem.swift in Sources */,
+				384C428221AF16B300084C67 /* BaseViewController.swift in Sources */,
 				38B30957211921D700D5C930 /* UIColorExtension.swift in Sources */,
 				38D114E71FF01EED0004E288 /* PageCell.swift in Sources */,
 				387F890821161E16005ECF26 /* SideMenuView.swift in Sources */,
@@ -334,7 +335,6 @@
 				04E828681FDDE280008AF3DB /* Page.swift in Sources */,
 				04E828581FDDA83E008AF3DB /* BooksListViewController.swift in Sources */,
 				3857B8D9211719D700A07DCA /* SideMenuHeaderSectionView.swift in Sources */,
-				387F890B2116264D005ECF26 /* LightNavigationController.swift in Sources */,
 				04E828561FDDA83E008AF3DB /* AppDelegate.swift in Sources */,
 				3857B8DF2117C54800A07DCA /* SideMenuDelegate.swift in Sources */,
 				3857B8E52117D6AE00A07DCA /* navigationController+Layout.swift in Sources */,

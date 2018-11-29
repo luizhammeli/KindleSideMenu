@@ -24,53 +24,14 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     }()
     
     let cellID = "cellID"
-    var delegate: SideMenuDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.black.withAlphaComponent(0)
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(hideSideMenu))
-        self.addGestureRecognizer(panGesture)
+        self.backgroundColor = UIColor.clear
         setUpTableView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    @objc func hideSideMenu(gesture: UIPanGestureRecognizer){
-        if gesture.state == .changed{
-            handleSwipeChanged(gesture)
-        }else if gesture.state == .ended{
-            handlePanEnded(gesture)
-        }
-    }
-    
-    func handleSwipeChanged(_ gesture: UIPanGestureRecognizer){
-        let translation = gesture.translation(in: self.superview)
-        if(translation.x > 0){return}
-        print(translation.x)
-        self.backgroundColor = UIColor.black.withAlphaComponent(-translation.y / 200)
-        self.transform = CGAffineTransform(translationX: translation.x, y: 0)
-    }
-    
-    func handlePanEnded(_ gesture: UIPanGestureRecognizer){
-        let translation = gesture.translation(in: self.superview)
-        let velocity = gesture.velocity(in: self.superview)
-        //print(gesture.velocity)
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            self.transform = .identity
-            if(translation.x < -200 || velocity.x < -500){
-                self.delegate?.hideSideMenuView()
-            }else{
-                self.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-            }
-        }, completion: nil)
-    }
-    
-    func showBackgroundView(_ alpha: CGFloat){
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                self.backgroundColor = UIColor.black.withAlphaComponent(alpha)
-        }, completion: nil)
     }
 }
